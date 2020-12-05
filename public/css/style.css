@@ -1,0 +1,83 @@
+body {
+    font-family: "Verdana", sans-serif;
+    text-align: center;
+}
+
+.site-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+#puzzle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#puzzle > div {
+    display: flex;
+    justify-content: center;
+}
+
+#puzzle input {
+    appearance: none;
+    -moz-appearance: none;
+    border-top: 1px solid #949494;
+    border-left: 1px solid #949494;
+    border-right: none;
+    border-bottom: none;
+    display: flex;
+    flex: 0 0 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#puzzle input:last-child {
+    border-right: 1px solid #949494;
+}
+
+#puzzle > div:last-child input {
+    border-bottom: 1px solid #949494;
+}
+
+/* Hide Arrows on Number Field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button {
+    appearance: none;
+    padding: 5px 20px;
+    border: none;
+    background: lightblue;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-family: "Verdana", sans-serif;
+}
+
+.button:hover {
+    background: #777777;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#result {
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.valid {
+    background-color: lightgreen;
+}
+
+.invalid {
+    background-color: pink;
+}
