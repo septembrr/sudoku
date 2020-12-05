@@ -28,6 +28,7 @@
     $("#puzzleForm").submit(function(e){
         e.preventDefault();
 
+        // Get entry values
         let tempFields = [];
         for (let field of $(".sudoku-field")) {
             tempFields.push($(field).val());
@@ -38,6 +39,7 @@
             fields.push(tempFields.splice(0,9));
         }
 
+        // Send request to /check to validate entry
         $.ajax({
             url: "/check",
             method: "POST",
@@ -109,7 +111,7 @@
         $("#result").hide();
     });
 
-    // Remove results when input changes
+    // Remove results display when input changes
     $(".sudoku-field").change(function(e) {
         $("#result").hide();
     });
