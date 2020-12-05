@@ -2,6 +2,7 @@
  * Sudoku Game
  */
 
+// Set up dependencies
 const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars').create({
@@ -9,7 +10,7 @@ const handlebars = require('express-handlebars').create({
 });
 const bodyParser = require('body-parser');
 
-// Express should use handlebars
+// Prepare express settings
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static('public'));
